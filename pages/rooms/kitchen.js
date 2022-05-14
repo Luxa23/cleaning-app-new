@@ -4,6 +4,7 @@ import StyledCardContainer from '../../components/StyledComponents/StyledCardCon
 import Styledh3 from '../../components/StyledComponents/Styledh3';
 import StyledTextBlock from '../../components/StyledComponents/StyledTextBlock';
 import Styledh1 from '../../components/Styledh1';
+import Select from '../../components/Select';
 
 export default function IndividualRoomsPage() {
   return (
@@ -13,7 +14,7 @@ export default function IndividualRoomsPage() {
         <div>
           <StyledCardContainer>
             <Styledh3>Assignee:</Styledh3>
-            <dropwdown></dropwdown>
+            <Select></Select>
           </StyledCardContainer>
           <StyledCardContainer>
             <Styledh3>Status:</Styledh3>
