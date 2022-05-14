@@ -1,6 +1,6 @@
 import StyledCardContainer from './StyledComponents/StyledCardContainer';
 import StyledCardTitle from './StyledComponents/StyledCardTitle';
-import StyledDiv from './StyledComponents/StyledDiv';
+import StyledStateDiv from './StyledComponents/StyledStateDiv';
 import StyledImage from './StyledComponents/StyledImage';
 
 export default function RoomCard({ children }) {
@@ -8,7 +8,7 @@ export default function RoomCard({ children }) {
     <StyledCardContainer>
       <StyledCardTitle>{children}</StyledCardTitle>
       <StyledImage></StyledImage>
-      <StyledDiv></StyledDiv>
+      <StyledStateDiv></StyledStateDiv>
     </StyledCardContainer>
   );
 }
