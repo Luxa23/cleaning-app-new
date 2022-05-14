@@ -7,7 +7,7 @@ export default function Nav() {
     <StyledNav>
       <Button>
         <Link passHref href="/">
-          <a>Rooms</a>
+          <a>Rooms Overview</a>
         </Link>
       </Button>
 
