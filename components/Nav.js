@@ -10,7 +10,6 @@ export default function Nav() {
           <a>Rooms Overview</a>
         </Link>
       </Button>
-
       <Button>
         <Link passHref href="/persons">
           <a>Flat Mates</a>

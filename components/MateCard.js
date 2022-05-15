@@ -1,12 +1,12 @@
-import StyledCardContainer from './StyledComponents/StyledCardContainer';
 import StyledCardTitle from './StyledComponents/StyledCardTitle';
 import StyledImage from './StyledComponents/StyledImage';
+import StyledCard from './StyledComponents/StyledCard';
 
 export default function MateCard({ children }) {
   return (
-    <StyledCardContainer>
+    <StyledCard>
       <StyledCardTitle>{children}</StyledCardTitle>
       <StyledImage></StyledImage>
-    </StyledCardContainer>
+    </StyledCard>
   );
 }
