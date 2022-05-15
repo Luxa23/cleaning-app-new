@@ -1,14 +1,15 @@
 import Nav from '../components/Nav';
 import MateCard from '../components/MateCard';
+import StyledCardContainer from '../components/StyledComponents/StyledCardContainer';
 
 export default function PersonsPage() {
   return (
     <>
-      <div>
+      <StyledCardContainer>
         <MateCard>Bob</MateCard>
         <MateCard>Alice</MateCard>
         <MateCard>Eve</MateCard>
-      </div>
+      </StyledCardContainer>
 
       <Nav></Nav>
     </>

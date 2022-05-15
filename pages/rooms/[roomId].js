@@ -5,26 +5,37 @@ import Styledh3 from '../../components/StyledComponents/Styledh3';
 import StyledTextBlock from '../../components/StyledComponents/StyledTextBlock';
 import Styledh1 from '../../components/Styledh1';
 import Select from '../../components/Select';
+import StyledCard from '../../components/StyledComponents/StyledCard';
+import { useState } from 'react';
 
 export default function IndividualRoomsPage() {
+  const [value, setValue] = useState(false);
+
   return (
     <>
       <div>
         <Styledh1>Kitchen</Styledh1>
-        <div>
-          <StyledCardContainer>
+
+        <StyledCardContainer>
+          <StyledCard>
             <Styledh3>Assignee:</Styledh3>
             <Select></Select>
-          </StyledCardContainer>
-          <StyledCardContainer>
+          </StyledCard>
+          <StyledCard>
             <Styledh3>Status:</Styledh3>
-            <StyledStateDiv></StyledStateDiv>
-          </StyledCardContainer>
-          <StyledCardContainer>
+            <StyledStateDiv
+              bool={value}
+              type="button"
+              onClick={() => {
+                setValue(!value);
+              }}
+            ></StyledStateDiv>
+          </StyledCard>
+          <StyledCard>
             <Styledh3>Frequency: </Styledh3>
             <span>weekly</span>
-          </StyledCardContainer>
-        </div>
+          </StyledCard>
+        </StyledCardContainer>
 
         <StyledTextBlock>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam

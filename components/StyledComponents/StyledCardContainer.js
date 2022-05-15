@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 
-const StyledCardContainer = styled.section`
+const StyledCardContainer = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  margin: 20px;
-  border: 2px solid black;
+  row-gap: 1.5rem;
+  padding: 2rem;
 `;
 
 export default StyledCardContainer;
