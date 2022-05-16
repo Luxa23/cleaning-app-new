@@ -7,19 +7,36 @@ import Styledh1 from '../../components/Styledh1';
 import Select from '../../components/Select';
 import StyledCard from '../../components/StyledComponents/StyledCard';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
+import useStore from '../../hooks/useStore';
 
 export default function IndividualRoomsPage() {
   const [value, setValue] = useState(false);
+  // const room = rooms.find(room_ => room_.id === id);
+  // const mates = useStore(state => state.mates);
+
+  const rooms = useStore(state => state.rooms);
+
+  const router = useRouter();
+  const { roomId } = router.query;
+  const currentRoom = rooms.find(room_ => room_.id === roomId);
 
   return (
+    // wenn room vorhanden ist, returne room sonst nichts
     <>
       <div>
-        <Styledh1>Kitchen</Styledh1>
+        <Styledh1>{currentRoom.name}</Styledh1>
 
         <StyledCardContainer>
           <StyledCard>
             <Styledh3>Assignee:</Styledh3>
-            <Select></Select>
+            <Select
+            //      onChange={event => chooseMate(room.id, event.target.value)}
+            >
+              {/* {mates.map(mate => {
+                  return <option value={mate.id}>{mate.name}</option>;
+                })} */}
+            </Select>
           </StyledCard>
           <StyledCard>
             <Styledh3>Status:</Styledh3>
